@@ -11,8 +11,10 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  entry_points:
+    - dmf-chip = dmf_chip.__main__:main
 
 requirements:
   host:
