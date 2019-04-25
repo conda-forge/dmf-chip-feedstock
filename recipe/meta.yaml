@@ -1,5 +1,5 @@
 {% set name = "dmf-chip" %}
-{% set version = "0.5.0" %}
+{% set version = "0.5.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://github.com/sci-bots/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 1dc9d12d4ce05344bc28064db4deef5629144da218f1973503d1c6c6132f265b
+  sha256: b94a905449528eca274d780d842855110a7e5b928b49f67268166c6e29c6d42e
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
   entry_points:
     - dmf-chip = dmf_chip.__main__:main
